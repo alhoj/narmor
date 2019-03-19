@@ -2,8 +2,8 @@ clear
 
 addpath(genpath('/m/nbe/scratch/narmor/scripts'))
 
-res='2mm';
-ridgeParam=1e6;
+res='2mm'; % resolution, i.e. voxel size
+ridgeParam=1e6; % ridge parameter
 
 subs={
 'narr_subj_09'
@@ -37,7 +37,7 @@ subs={
 'narr_subj_39'
 };
 %%
-% load the language model
+% load the word2vec language model
 load('w2vCompShifted2TRsEmptyRowsFilledWithPrevious')
 
 mask=load_nii(['/m/nbe/scratch/narmor/masks/mask_' res '.nii']);
